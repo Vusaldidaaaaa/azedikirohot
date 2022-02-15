@@ -24,7 +24,7 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🌀TagXaosbot**\n ile Grupunuzdaki userleri fərqli formalarda tağ edə bilərsiz \nKamandalar üçün =======> /help yazın**",
+  await event.reply("**🌀SohbetMekanidiTagBot**\n ile Grupunuzdaki userleri fərqli formalarda tağ edə bilərsiz \nKamandalar üçün =======> /help yazın**",
                     buttons=(
                    
 		      [Button.url('Meni Gruba Ekle ➕', 'http://t.me/SohbetMekanidiTagBot?startgroup=a')],
@@ -36,7 +36,7 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**🌀 TagXaosbot Kamandaları**\n\n**/tag <sebeb> - 5-li tağ Atar**\n\n**/etag <sebeb> - Emoji ile tağ atar**\n\n**/tektag sebeb - Userleri Tek Tek tağ atar**\n\n**/admins sebeb - Adminleri Tek Tek Tağ Eder**\n\n**/start - botu başlatır botu dayandırmaq - /cancel**"
+  helptext = "**🌀 SohbetMekanidiTagBot Kamandaları**\n\n**/tag <sebeb> - 5-li tağ Atar**\n\n**/etag <sebeb> - Emoji ile tağ atar**\n\n**/tektag sebeb - Userleri Tek Tek tağ atar**\n\n**/admins sebeb - Adminleri Tek Tek Tağ Eder**\n\n**/start - botu başlatır botu dayandırmaq - /cancel**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Meni Gruba Ekle➕', 'http://t.me/SohbetMekanidiTagBot?startgroup=a')],
