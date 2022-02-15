@@ -27,10 +27,10 @@ async def start(event):
   await event.reply("**🌀TagXaosbot**\n ile Grupunuzdaki userleri fərqli formalarda tağ edə bilərsiz \nKamandalar üçün =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Meni Gruba Ekle ➕', 'https://t.me/tagxaosbot?startgroup=a')],
-                      [Button.url('Fban kanal❌', 'https://t.me/X_fedd')],
-                      [Button.url('Support📣', 'https://t.me/xaos_support')],
-		      [Button.url('Developer👨🏻‍💻', 'https://t.me/mr_kabus_13')],
+		      [Button.url('Meni Gruba Ekle ➕', 'http://t.me/SohbetMekanidiTagBot?startgroup=a')],
+                      [Button.url('Crocodile Botumuz 🐊', 'http://t.me/SohbetMekanidiSozOyunuBot')],
+                      [Button.url('Qrup👑', 'https://t.me/SohbetMekanidi')],
+		      [Button.url('Developer👨🏻‍💻', 'https://t.me/sohbetmekanidisahib')],
                     ),
                     link_preview=False
                    )
@@ -39,20 +39,20 @@ async def help(event):
   helptext = "**🌀 TagXaosbot Kamandaları**\n\n**/tag <sebeb> - 5-li tağ Atar**\n\n**/etag <sebeb> - Emoji ile tağ atar**\n\n**/tektag sebeb - Userleri Tek Tek tağ atar**\n\n**/admins sebeb - Adminleri Tek Tek Tağ Eder**\n\n**/start - botu başlatır botu dayandırmaq - /cancel**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Meni Gruba Ekle➕', 'https://t.me/tagxaosbot?startgroup=a')],
-                      [Button.url('Fban ❌kanal', 'https://t.me/x_fedd')],
-                      [Button.url('Resmi Kanal🔖', 'https://t.me/xxaosresmi')],
-		      [Button.url('Developer🧑‍🔧', 'https://t.me/mr_kabus_13')],
+                      [Button.url('Meni Gruba Ekle➕', 'http://t.me/SohbetMekanidiTagBot?startgroup=a')],
+                      [Button.url('Crocodile Botumuz 🐊', 'http://t.me/SohbetMekanidiSozOyunuBot')],
+                      [Button.url('Qrup👑', 'https://t.me/SohbetMekanidi')],
+		      [Button.url('Developer🧑‍🔧', 'https://t.me/sohbetmekanidisahib')],
                     ),
                     link_preview=False
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**Çok funksiyalı tag botu axdaran gruo sahiblerine gore @TagXaosbot:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @TagXaosbot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
+  helptext = "**Çok funksiyalı tag botu axdaran grup sahiblerine gore @SohbetMekanidiTagBot:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @TagXaosbot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/lucitaggerbot?startgroup=a')],
+                      [Button.url('Botu Gruba Əlavə Et➕', 'http://t.me/SohbetMekanidiTagBot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -185,7 +185,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("işlem başarıyla durduruldu❌")
+        await event.respond("Prosessor Uğurla Diyandı❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -220,7 +220,7 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("**önceki mesajı etiketleye bilmerim*")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Başlamaq için Sebeb Yazın❗️")
+    return await event.respond("Başlamaq üçün Sebeb Yazın❗️")
   else:
     return await event.respond("**Işleme başlamağım için sebeb yazın..**")
   
@@ -232,7 +232,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("**Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilər @Mr_KABUS_13**❌****")
+        await event.respond("**Işlem Başarıyla Durduruldu\n\n**Buda sizin reklamınız ola bilər @sohbetmekanidisahib**❌****")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -250,7 +250,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**Burda sizin reklamınız ola bilər @Mr_KABUS_13**❌**")
+        await event.respond("Işlem Başarıyla Durduruldu\n\n**Burda sizin reklamınız ola bilər @sohbetmekanidisahib**❌**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -284,5 +284,5 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-print(">> Bot çalıyor merak etme 🚀 @Mr_KABUS_13 bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etme 🚀 @sohbetmekanidisahib bilgi alabilirsin <<")
 client.run_until_disconnected()
